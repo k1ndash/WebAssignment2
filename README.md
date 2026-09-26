@@ -1,4 +1,4 @@
-# Assignment 2 — Advanced CSS (Flexbox & Grid)
+# Assignment 2 -Advanced CSS (Flexbox & Grid)
 
 **Name:** Meiirzhan Tolendi
 **Group:** SE-2539
