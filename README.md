@@ -12,8 +12,6 @@
 
 The header is a flex container (`display: flex`) with `justify-content: space-between` to push the logo left and the links right, and `align-items: center` to keep them on the same vertical line. Spacing between the links uses `gap` instead of margins.
 
-*Screenshot:*
-`![Task 0 — Navigation bar](screenshots/task0-navbar.png)`
 
 ### Task 1. Card Row
 
