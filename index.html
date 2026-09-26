@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment 2 — Advanced CSS (Flexbox &amp; Grid)</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .hero {
+    padding: 3.5rem 1.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero h1 { font-size: 2.4rem; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+  .task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+  .task-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .task-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .task-card .num {
+    font-family: 'Newsreader', serif;
+    font-size: 1.6rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.6rem;
+  }
+  .task-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  .task-card p {
+    font-size: 0.9rem;
+    color: #565D70;
+    margin: 0;
+  }
+  .part-label {
+    margin: 2.5rem 0 1rem;
+    font-size: 0.8rem;
+    text-transform: none;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Advanced CSS: Flexbox &amp; Grid</h1>
+  <p class="meta">Meiirzhan Tolendi — Group SE-2539 · Assignment 2</p>
+
+  <p class="part-label">Part 1 — Flexbox</p>
+  <div class="task-grid">
+    <a class="task-card" href="task0-navbar.html">
+      <div class="num">00</div>
+      <h2>Navigation Bar</h2>
+      <p>Logo and links aligned with Flexbox.</p>
+    </a>
+    <a class="task-card" href="task1-cards.html">
+      <div class="num">01</div>
+      <h2>Card Row</h2>
+      <p>Equal-height cards with a hover lift.</p>
+    </a>
+  </div>
+
+  <p class="part-label">Part 2 — Grid</p>
+  <div class="task-grid">
+    <a class="task-card" href="task2-grid-layout.html">
+      <div class="num">02</div>
+      <h2>Page Layout with Grid Areas</h2>
+      <p>Header, sidebar, main and footer via named areas.</p>
+    </a>
+    <a class="task-card" href="task3-gallery.html">
+      <div class="num">03</div>
+      <h2>Image Gallery</h2>
+      <p>Nine images in a grid with caption overlays.</p>
+    </a>
+  </div>
+
+  <p class="part-label">Part 3 — Combining Flexbox &amp; Grid</p>
+  <div class="task-grid">
+    <a class="task-card" href="task4-portfolio.html">
+      <div class="num">04</div>
+      <h2>Portfolio Page</h2>
+      <p>Grid for the page skeleton, Flexbox inside each piece.</p>
+    </a>
+  </div>
+</div>
+</body>
+</html>

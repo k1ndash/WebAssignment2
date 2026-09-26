@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task 1 — Card Row</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back-link" href="index.html">← All tasks</a>
+  <p class="task-label">Part 1 · Task 1</p>
+  <h1>Card Row</h1>
+  <p class="task-intro">The container is a flex row with <code>flex-wrap: wrap</code> and a fixed <code>gap</code>. Each card is itself a column flexbox (<code>flex-direction: column</code>) so the button stays pinned to the bottom regardless of how much text is above it, which keeps every card the same height.</p>
+
+  <div class="card-row">
+    <article class="card">
+      <img src="https://picsum.photos/id/1015/480/320" alt="Mountain river landscape">
+      <div class="card-body">
+        <h3>Field Notes</h3>
+        <p>A short travel journal covering three weeks along the northern coast trail.</p>
+        <button>Read entry</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://picsum.photos/id/1025/480/320" alt="Dog portrait">
+      <div class="card-body">
+        <h3>Companion</h3>
+        <p>Notes on training, feeding schedules, and long walks with a very good dog.</p>
+        <button>Read entry</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://picsum.photos/id/1035/480/320" alt="Forest path">
+      <div class="card-body">
+        <h3>Quiet Trail</h3>
+        <p>An early-morning walk through a pine forest, with a much longer caption to test that the cards still line up evenly.</p>
+        <button>Read entry</button>
+      </div>
+    </article>
+  </div>
+</div>
+</body>
+</html>
