@@ -17,8 +17,6 @@ The header is a flex container (`display: flex`) with `justify-content: space-be
 
 The card container is a flex row (`flex-wrap: wrap`, `gap`). Each individual card is a column flexbox (`flex-direction: column`), which keeps the button pinned to the bottom of the card no matter how much text is above it — this is what makes all three cards line up at equal height. Hovering a card lifts it with `transform: translateY()` and adds a soft shadow.
 
-*Screenshot:*
-`![Task 1 — Card row](screenshots/task1-cards.png)`
 
 ---
 
