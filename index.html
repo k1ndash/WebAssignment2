@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment 2 — Advanced CSS (Flexbox & Grid)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero-title">
+  <h1>Advanced CSS: Flexbox &amp; Grid</h1>
+  <p class="meta">Meiirzhan Tolendi — Group SE-2539 · Assignment 2</p>
+</div>
+
+<div class="wrap">
+
+  <p class="part-label">Part 1 — Flexbox</p>
+
+  <section id="task0">
+    <p class="task-label">Task 0</p>
+    <h2>Navigation Bar</h2>
+    <p class="task-intro">Header container set to display: flex, logo and links pushed to opposite ends with justify-content: space-between, aligned on the same line with align-items: center. Spacing between links comes from gap.</p>
+
+    <header class="site-header">
+      <div class="logo">Atelier</div>
+      <ul class="nav-links">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Studio</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a class="cta" href="#">Get in touch</a></li>
+      </ul>
+    </header>
+  </section>
+
+  <section id="task1">
+    <p class="task-label">Task 1</p>
+    <h2>Card Row</h2>
+    <p class="task-intro">The container is a flex row with flex-wrap: wrap and a fixed gap. Each card is a column flexbox, so the button stays pinned to the bottom regardless of text length, which keeps every card the same height.</p>
+
+    <div class="card-row">
+      <article class="card">
+        <img src="https://picsum.photos/id/1015/480/320" alt="Mountain river landscape">
+        <div class="card-body">
+          <h3>Field Notes</h3>
+          <p>A short travel journal covering three weeks along the northern coast trail.</p>
+          <button>Read entry</button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/1025/480/320" alt="Dog portrait">
+        <div class="card-body">
+          <h3>Companion</h3>
+          <p>Notes on training, feeding schedules, and long walks with a very good dog.</p>
+          <button>Read entry</button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/1035/480/320" alt="Forest path">
+        <div class="card-body">
+          <h3>Quiet Trail</h3>
+          <p>An early-morning walk through a pine forest, with a longer caption to test that the cards still line up evenly.</p>
+          <button>Read entry</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <p class="part-label">Part 2 — Grid</p>
+
+  <section id="task2">
+    <p class="task-label">Task 2</p>
+    <h2>Page Layout with Grid Areas</h2>
+    <p class="task-intro">The parent is a grid with named grid-template-areas. Each child is placed with grid-area, so the header and footer span the full width while the sidebar and main content share the middle row.</p>
+
+    <div class="page-grid">
+      <header class="g-header">Site header — spans both columns</header>
+      <nav class="g-sidebar">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+      <main class="g-main">
+        <h3>Main content</h3>
+        <p>This area occupies the second grid column and grows to fill the remaining height of the layout.</p>
+      </main>
+      <footer class="g-footer">Footer — spans both columns</footer>
+    </div>
+  </section>
+
+  <section id="task3">
+    <p class="task-label">Task 3</p>
+    <h2>Image Gallery</h2>
+    <p class="task-intro">Nine images sit in a grid-template-columns: repeat(3, 1fr) container with a fixed grid-auto-rows and a consistent gap. Each caption is absolutely positioned inside its figure and slides up on hover.</p>
+
+    <div class="gallery">
+      <figure><img src="https://picsum.photos/id/1018/400/400" alt="Mountain valley"><figcaption>Valley, early light</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1043/400/400" alt="Desert dunes"><figcaption>Dunes at dusk</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1050/400/400" alt="City street"><figcaption>Old town street</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1060/400/400" alt="Forest canopy"><figcaption>Canopy view</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1069/400/400" alt="Coastline"><figcaption>Rocky coastline</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1074/400/400" alt="Deer in grass"><figcaption>Deer, morning field</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1080/400/400" alt="Lake reflection"><figcaption>Still lake</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1084/400/400" alt="Snowy peak"><figcaption>Snowy peak</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/109/400/400" alt="Countryside road"><figcaption>Countryside road</figcaption></figure>
+    </div>
+  </section>
+
+  <p class="part-label">Part 3 — Combining Flexbox &amp; Grid</p>
+
+  <section id="task4">
+    <p class="task-label">Task 4</p>
+    <h2>Portfolio Page</h2>
+    <p class="task-intro">The page skeleton (header, projects, sidebar, footer) is a two-column Grid. The header itself is a Flexbox row, and every project card arranges its thumbnail, text and button with Flexbox — Grid handles the big regions, Flexbox handles the content inside each region.</p>
+
+    <header class="portfolio-header">
+      <div class="logo">M. Tolendi</div>
+      <nav>
+        <ul>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="portfolio-main">
+      <section class="projects">
+        <article class="project-card">
+          <img src="https://picsum.photos/id/180/200/200" alt="Weather app screenshot">
+          <div class="project-body">
+            <h3>Weather Dashboard</h3>
+            <p>A small React app pulling live forecasts and rendering them with Chart.js.</p>
+            <button>View project</button>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/201/200/200" alt="Recipe app screenshot">
+          <div class="project-body">
+            <h3>Recipe Finder</h3>
+            <p>Search and filter recipes by ingredient, with a saved-favorites list.</p>
+            <button>View project</button>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/24/200/200" alt="Budget tracker screenshot">
+          <div class="project-body">
+            <h3>Budget Tracker</h3>
+            <p>Monthly spending tracker with category breakdowns and CSV export.</p>
+            <button>View project</button>
+          </div>
+        </article>
+      </section>
+
+      <aside class="sidebar-info">
+        <h3>About</h3>
+        <ul>
+          <li>SE-2539, Astana IT University</li>
+          <li>Front-end coursework, 2026</li>
+          <li>Focus: Flexbox &amp; CSS Grid</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="portfolio-footer">© 2026 Meiirzhan Tolendi — spans the full width of the page</footer>
+  </section>
+
+</div>
+</body>
+</html>
