@@ -5,17 +5,6 @@
 
 ---
 
-## How to view
-
-Open `index.html` in a browser, or open any of the task pages directly:
-
-- `task0-navbar.html`
-- `task1-cards.html`
-- `task2-grid-layout.html`
-- `task3-gallery.html`
-- `task4-portfolio.html`
-
----
 
 ## Part 1. Flexbox
 
