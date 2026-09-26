@@ -6,41 +6,33 @@
 ---
 
 
-Part 1. Flexbox
-
 Task 0. Navigation Bar
 
-The header is a flex container (display: flex) with justify-content: space-between, pushing the logo left and the links right, and align-items: center, keeping them on one vertical line. Gap is used for spacing instead of margins.
+The header uses display: flex with justify-content: space-between, so the logo goes left and the links go right. align-items: center keeps everything on one line, and I used gap instead of margins for spacing.
 
 Task 1. Card Row
 
-The card container is a flex row (flex-wrap: wrap, gap). Each card is a column flexbox (flex-direction: column), which keeps the button at the bottom no matter how much text is above it — this makes all three cards equal in height. On hover, a card lifts with transform: translateY() and gets a soft shadow.
+The card container is a flex row with flex-wrap: wrap and gap. Each card is a column flexbox (flex-direction: column), so the button always stays at the bottom no matter how long the text is. That's how all three cards end up the same height. On hover, a card moves up with transform: translateY() and gets a shadow.
 
 Part 2. Grid System
 
 Task 2. Page Layout with Grid Areas
 
-The page wrapper is a grid container with named grid-template-areas: header and footer span both columns, while the sidebar and main content share the middle row. Each child is placed with its matching grid-area name.
-
-Screenshot: screenshots/task2-grid-layout.png
+The page wrapper is a grid with named grid-template-areas. The header and footer take both columns, and the sidebar and main content share the middle row. Each element just gets its grid-area name.
 
 Task 3. Image Gallery
 
-Nine images sit in a grid-template-columns: repeat(3, 1fr) container with fixed grid-auto-rows and a consistent gap. Each caption is absolutely positioned at the bottom of its <figure> and slides in on hover using transform: translateY().
-
-Screenshot: screenshots/task3-gallery.png
+Nine images in a grid with grid-template-columns: repeat(3, 1fr), fixed grid-auto-rows and a gap. Each caption is absolutely positioned at the bottom of its figure and slides up on hover with transform: translateY().
 
 Part 3. Combining Flexbox & Grid
 
 Task 4. Portfolio Page
 
-The page skeleton (header, projects column, sidebar, footer) uses Grid — a two-column grid-template-columns: 2fr 1fr for the main section. Inside it, Flexbox handles the smaller parts: the header nav is a flex row, and each project card lays out its thumbnail, title, description and button with display: flex. The footer sits outside the two columns and spans the full page width.
-
-Screenshot: screenshots/task4-portfolio.png
+The page skeleton (header, projects, sidebar, footer) is built with Grid — two columns, grid-template-columns: 2fr 1fr for the main part. Inside that, Flexbox does the small stuff: the nav is a flex row, and each project card uses flex to line up the image, title, text and button. The footer is outside the two columns and spans the whole width.
 
 Summary of work process
 
-I built one shared css/style.css file with variables, reset rules and all task styles, and every page links to it. I started with Flexbox for simple one-dimensional layouts (navbar, card row), then moved to Grid when I needed to control rows and columns at once (page areas, gallery). For the portfolio I combined both: Grid for big regions, Flexbox for content inside them. The trickiest part was equal-height cards — the fix was making each card a column flex container so flex: 1 on the paragraph pushes the button to the same spot in every card.
+I made one shared css/style.css with variables, reset rules and all the styles, and linked it on every page. I started with Flexbox for the simple one-direction layouts (navbar, cards), then switched to Grid when I needed rows and columns together (page layout, gallery). For the portfolio I used both — Grid for the big sections, Flexbox inside them. The hardest part was equal-height cards. I fixed it by making each card a column flex container, so flex: 1 on the paragraph pushes the button to the same place in every card.
 
 Resources used
 
